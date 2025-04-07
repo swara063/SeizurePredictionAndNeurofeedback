@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurofeedback Therapy - Neurofeedback App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Neurofeedback Treatment & Prevention</h1>
+            <p>Train your brain with real-time feedback for better health.</p>
+        </header>
+
+        <section class="therapy-dashboard">
+            <h2>Neurofeedback Dashboard</h2>
+            <p>Current Training Progress: 65%</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%; background-color: #a1e3d8;">65% Complete</div>
+            </div>
+            <button onclick="showNotification('Training Progress Updated!')">Refresh Progress</button>
+        </section>
+
+        <section class="manual-session">
+            <h2>Manual Neurofeedback Session</h2>
+            <p>Session Status: <strong>Not Started</strong></p>
+            <button onclick="showNotification('Manual Session Started!')">Start Session</button>
+            <button onclick="showNotification('Session Data Saved!')">Save Session Data</button>
+        </section>
+
+        <section class="preemptive-mode">
+            <h2>Preemptive Seizure Prevention Mode</h2>
+            <p>Status: <strong>Inactive</strong></p>
+            <button onclick="showNotification('Preemptive Mode Activated!')">Activate Mode</button>
+        </section>
+
+        <section class="ai-feedback">
+            <h2>AI-Personalized Feedback</h2>
+            <p>Real-time Brainwave Adaptation: <strong>Ongoing</strong></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%; background-color: #c3aed6;">Adaptive Feedback 70%</div>
+            </div>
+            <button onclick="showNotification('AI Feedback Updated!')">Update Feedback</button>
+        </section>
+
+        <section class="threshold-activation">
+            <h2>Threshold-Based Activation</h2>
+            <p>Seizure Threshold Detected: <strong>No</strong></p>
+            <button onclick="showNotification('Monitoring for Threshold Activation...')">Monitor Threshold</button>
+        </section>
+
+        <nav>
+            <button onclick="navigateTo('index.html')">Home</button>
+            <button onclick="navigateTo('monitoring.html')">Monitoring</button>
+            <button onclick="navigateTo('profile.html')">Profile</button>
+            <button onclick="navigateTo('settings.html')">Settings</button>
+        </nav>
+    </div>
+</body>
+
+</html>
