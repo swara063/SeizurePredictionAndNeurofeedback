@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Monitoring & Prediction - Neurofeedback App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Real-Time Monitoring & Preemptive Prediction</h1>
+            <p>Stay informed with real-time brainwave and wearable data.</p>
+        </header>
+
+        <section class="live-eeg">
+            <h2>Live EEG Monitoring</h2>
+            <p>Brainwave Activity: <strong>Alpha: 45%, Beta: 30%, Delta: 25%</strong></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 45%; background-color: #a1e3d8;">Alpha Waves</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 30%; background-color: #c3aed6;">Beta Waves</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 25%; background-color: #f5cac3;">Delta Waves</div>
+            </div>
+            <button onclick="showNotification('Live EEG Data Streaming...')">Refresh EEG Data</button>
+        </section>
+
+        <section class="risk-prediction">
+            <h2>AI-Powered Risk Prediction</h2>
+            <p>Seizure Risk: <strong>Moderate (60%)</strong></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 60%; background-color: #f7b267;">60% Risk Level</div>
+            </div>
+            <button onclick="showNotification('AI Prediction Updated!')">Update Prediction</button>
+        </section>
+
+        <section class="full-model-prediction">
+            <h2>Full Model Prediction (EEG + Wearables)</h2>
+            <p>Prediction Accuracy: <strong>85%</strong></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%; background-color: #a1e3d8;">85% Accuracy</div>
+            </div>
+            <button onclick="showNotification('Full Model Prediction Updated!')">Refresh Full Prediction</button>
+        </section>
+
+        <section class="wearable-only-prediction">
+            <h2>Wearable-Only Prediction</h2>
+            <p>Prediction Accuracy: <strong>50%</strong> <span style="color: #f28482;">(Limited Accuracy)</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 50%; background-color: #f28482;">50% Accuracy</div>
+            </div>
+            <button onclick="showNotification('Wearable-Only Prediction Updated!')">Update Wearable Prediction</button>
+        </section>
+
+        <section class="emergency-alert">
+            <h2>Emergency Alert System</h2>
+            <button onclick="showNotification('Emergency Alert Sent to Caregiver!')">Send Manual Alert</button>
+            <p>Auto-SOS Countdown: <span id="countdown">5</span> seconds</p>
+            <button onclick="startCountdown()">Start Auto-SOS</button>
+        </section>
+    </div>
+
+    <script>
+        function showNotification(message) {
+            alert(message);
+        }
+
+        function startCountdown() {
+            let count = 5;
+            const countdownElement = document.getElementById('countdown');
+            const interval = setInterval(() => {
+                count--;
+                countdownElement.textContent = count;
+                if (count === 0) {
+                    clearInterval(interval);
+                    showNotification('Auto-SOS Activated! Alert Sent to Caregiver!');
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
