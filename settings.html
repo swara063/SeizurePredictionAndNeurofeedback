@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Neurofeedback App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Settings & Preferences</h1>
+            <p>Manage your app settings and notifications.</p>
+        </header>
+
+        <section class="profile-settings">
+            <h2>Profile Settings</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" value="JohnDoe">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" value="johndoe@example.com">
+
+            <button onclick="showNotification('Profile Updated!')">Save Profile</button>
+        </section>
+
+        <section class="notifications">
+            <h2>Notifications</h2>
+            <label><input type="checkbox" checked> Seizure Alerts</label><br>
+            <label><input type="checkbox" checked> Daily Summary</label><br>
+            <label><input type="checkbox"> Weekly Report</label><br>
+            <button onclick="showNotification('Notification Preferences Saved!')">Save Preferences</button>
+        </section>
+
+        <section class="device-settings">
+            <h2>Device Settings</h2>
+            <p>Manage your connected devices.</p>
+            <button onclick="showNotification('Device Connected!')">Connect New Device</button>
+            <button onclick="showNotification('Device Disconnected!')">Disconnect Device</button>
+        </section>
+
+        <section class="theme-settings">
+            <h2>Theme Settings</h2>
+            <label for="theme-select">Select Theme:</label>
+            <select id="theme-select" onchange="showNotification('Theme Changed!')">
+                <option value="default">Default</option>
+                <option value="mint">Mint Green</option>
+                <option value="lavender">Lavender</option>
+                <option value="dark">Dark Mode</option>
+            </select>
+        </section>
+
+        <section class="security-settings">
+            <h2>Security Settings</h2>
+            <label><input type="checkbox"> Enable Two-Factor Authentication</label><br>
+            <button onclick="showNotification('Security Settings Updated!')">Update Security</button>
+        </section>
+
+        <section class="app-info">
+            <h2>About This App</h2>
+            <p>Version: 1.0.0</p>
+            <p>Developed to help patients with epilepsy through advanced neurofeedback therapy.</p>
+            <button onclick="showNotification('Checking for Updates...')">Check for Updates</button>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Neurofeedback App. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
