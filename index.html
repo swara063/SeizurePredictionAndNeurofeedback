@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neurofeedback App - Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/logo.png" alt="App Logo" class="logo" />
+            <h1>Neurofeedback System</h1>
+            <p class="subtitle">For Seizure Prevention & Brainwave Redirection</p>
+        </header>
+
+        <section class="intro">
+            <h2>Welcome to Your Personal Brain Trainer</h2>
+            <p>
+                Our non-invasive neurofeedback system uses AI and real-time brain monitoring to help manage seizures and mental well-being.
+            </p>
+            <p>
+                Connect your EEG headset and wearable devices to begin your journey toward better neurological health.
+            </p>
+            <button onclick="showNotification('Devices connected successfully!')">Connect Devices</button>
+        </section>
+
+        <section class="progress-overview">
+            <h3>Today's Overview</h3>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%; background-color: #a1e3d8;">70% Daily Goal</div>
+            </div>
+
+            <div class="stats">
+                <div>
+                    <h4>Seizure Risk Level</h4>
+                    <p>Low (15%)</p>
+                </div>
+                <div>
+                    <h4>AI Training Progress</h4>
+                    <p>68%</p>
+                </div>
+                <div>
+                    <h4>Connected Devices</h4>
+                    <p>EEG Headset, Smartwatch</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="navigation">
+            <h3>Explore App</h3>
+            <div class="nav-grid">
+                <button onclick="navigate('onboarding.html')">Onboarding & Device Setup</button>
+                <button onclick="navigate('profile.html')">Profile & Data Collection</button>
+                <button onclick="navigate('monitoring.html')">Real-Time Monitoring</button>
+                <button onclick="navigate('neurofeedback.html')">Neurofeedback Therapy</button>
+                <button onclick="navigate('reports.html')">Reports & History</button>
+                <button onclick="navigate('settings.html')">Settings</button>
+            </div>
+        </section>
+
+        <section class="graph-section">
+            <h3>Live Brainwave Activity</h3>
+            <img src="assets/eeg-graph.svg" alt="EEG Graph" class="eeg-graph" />
+        </section>
+
+        <section class="dummy-activity">
+            <h3>Dummy Activity Feed</h3>
+            <ul>
+                <li>EEG Connected at 09:45 AM</li>
+                <li>AI Training Progressed to 68%</li>
+                <li>Low seizure risk detected at 10:00 AM</li>
+                <li>Last neurofeedback session: Successful</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Neurofeedback System. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+</body>
+
+</html>
