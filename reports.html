@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports & Insights - Neurofeedback App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Reports & Historical Insights</h1>
+            <p>Track your journey towards better brain health and wellbeing.</p>
+        </header>
+
+        <section class="monthly-summary">
+            <h2>Monthly Summary</h2>
+            <ul>
+                <li>Sessions Completed: 18</li>
+                <li>Average Seizure Risk: Low</li>
+                <li>Sleep Quality: Good (Avg. 7.2 hours/night)</li>
+                <li>Stress Trends: Mild variations</li>
+            </ul>
+            <button onclick="showNotification('Monthly Summary Refreshed!')">Refresh Summary</button>
+        </section>
+
+        <section class="graph-section">
+            <h2>Visual Insights</h2>
+            <div class="graph-container">
+                <h3>Seizure Risk Trend (Last 7 Days)</h3>
+                <div class="bar-chart">
+                    <div class="bar" style="height: 40%; background-color: #b4f0e7;">40%</div>
+                    <div class="bar" style="height: 50%; background-color: #b4f0e7;">50%</div>
+                    <div class="bar" style="height: 30%; background-color: #b4f0e7;">30%</div>
+                    <div class="bar" style="height: 60%; background-color: #b4f0e7;">60%</div>
+                    <div class="bar" style="height: 20%; background-color: #b4f0e7;">20%</div>
+                    <div class="bar" style="height: 45%; background-color: #b4f0e7;">45%</div>
+                    <div class="bar" style="height: 35%; background-color: #b4f0e7;">35%</div>
+                </div>
+            </div>
+
+            <div class="graph-container">
+                <h3>Sleep Quality (Hours Slept)</h3>
+                <div class="bar-chart">
+                    <div class="bar" style="height: 70%; background-color: #c2aff0;">7 hrs</div>
+                    <div class="bar" style="height: 80%; background-color: #c2aff0;">8 hrs</div>
+                    <div class="bar" style="height: 65%; background-color: #c2aff0;">6.5 hrs</div>
+                    <div class="bar" style="height: 75%; background-color: #c2aff0;">7.5 hrs</div>
+                    <div class="bar" style="height: 60%; background-color: #c2aff0;">6 hrs</div>
+                    <div class="bar" style="height: 85%; background-color: #c2aff0;">8.5 hrs</div>
+                    <div class="bar" style="height: 70%; background-color: #c2aff0;">7 hrs</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detailed-reports">
+            <h2>Detailed Report Access</h2>
+            <p>Download or view detailed insights into your brain training and health data.</p>
+            <button onclick="showNotification('Report Download Started!')">Download PDF Report</button>
+            <button onclick="showNotification('Viewing Report Online!')">View Report Online</button>
+        </section>
+
+        <section class="insights">
+            <h2>Insights & Recommendations</h2>
+            <ul>
+                <li>✅ Maintain consistent sleep schedule for improved recovery.</li>
+                <li>✅ Continue neurofeedback sessions at least 3 times a week.</li>
+                <li>✅ Moderate daily stress levels through relaxation exercises.</li>
+                <li>✅ Keep your devices connected for accurate tracking.</li>
+            </ul>
+            <button onclick="showNotification('Insights Updated!')">Refresh Insights</button>
+        </section>
+
+        <footer>
+            <button onclick="navigateTo('index.html')">Home</button>
+            <button onclick="navigateTo('profile.html')">Profile</button>
+            <button onclick="navigateTo('monitoring.html')">Monitoring</button>
+            <button onclick="navigateTo('therapy.html')">Therapy</button>
+            <button onclick="navigateTo('settings.html')">Settings</button>
+        </footer>
+    </div>
+</body>
+
+</html>
