@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile & Data - Neurofeedback App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>User Profile & Data Collection</h1>
+            <p>Manage your health data and personalize your experience.</p>
+        </header>
+
+        <section class="profile-creation">
+            <h2>Create Your Profile</h2>
+            <input type="text" placeholder="Name">
+            <input type="number" placeholder="Age">
+            <textarea placeholder="Medical History"></textarea>
+            <button onclick="showNotification('Profile Created!')">Save Profile</button>
+        </section>
+
+        <section class="wearables-dashboard">
+            <h2>Wearables Data Dashboard</h2>
+            <ul>
+                <li>Heart Rate: 72 bpm</li>
+                <li>Blood Pressure: 120/80 mmHg</li>
+                <li>SpO2: 98%</li>
+                <li>Sleep: 7.5 hrs</li>
+                <li>Stress Level: Moderate</li>
+            </ul>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%; background-color: #a1e3d8;">80% Data Synced</div>
+            </div>
+            <button onclick="showNotification('Wearables Data Updated!')">Refresh Data</button>
+        </section>
+
+        <section class="eeg-dashboard">
+            <h2>EEG Metrics</h2>
+            <ul>
+                <li>Alpha Waves: Moderate</li>
+                <li>Beta Waves: High Focus</li>
+                <li>Seizure Risk: Low (12%)</li>
+            </ul>
+            <button onclick="showNotification('EEG Data Refreshed!')">Refresh EEG Data</button>
+        </section>
+
+        <section class="ai-progress">
+            <h2>AI Training Progress</h2>
+            <p>Your AI assistant is becoming more personalized each day!</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%; background-color: #f7c8e0;">65% Personalized</div>
+            </div>
+        </section>
+
+        <section class="data-customization">
+            <h2>Data Source Customization</h2>
+            <label><input type="checkbox" checked> EEG Device</label><br>
+            <label><input type="checkbox" checked> Wearable Watch</label><br>
+            <label><input type="checkbox"> Sleep Monitor</label><br>
+            <button onclick="showNotification('Data Sources Updated!')">Save Settings</button>
+        </section>
+
+        <section class="disconnect-warning">
+            <h2>Wearable Disconnection Warning</h2>
+            <p>Status: All Devices Connected ✅</p>
+            <button onclick="showNotification('Warning: Device Disconnected!')">Simulate Disconnect</button>
+        </section>
+
+        <footer>
+            <button onclick="navigateTo('index.html')">⬅️ Back to Home</button>
+            <button onclick="navigateTo('monitoring.html')">Next: Real-Time Monitoring ➡️</button>
+        </footer>
+    </div>
+</body>
+
+</html>
