@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding - Neurofeedback App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Neurofeedback Setup</h1>
+            <p>Your journey to better neurological health starts here!</p>
+        </header>
+
+        <section class="screen" id="splash-screen">
+            <h2>Splash Screen</h2>
+            <p>Loading your personalized neurofeedback environment...</p>
+            <button onclick="nextScreen('intro-screen')">Continue</button>
+        </section>
+
+        <section class="screen hidden" id="intro-screen">
+            <h2>Welcome & App Overview</h2>
+            <p>Discover features to monitor, predict, and train your brain effectively.</p>
+            <ul>
+                <li>✅ Real-time EEG Monitoring</li>
+                <li>✅ AI-Powered Seizure Predictions</li>
+                <li>✅ Personalized Neurofeedback</li>
+            </ul>
+            <button onclick="nextScreen('login-screen')">Next</button>
+        </section>
+
+        <section class="screen hidden" id="login-screen">
+            <h2>Login / Signup</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button onclick="showNotification('Logged in successfully!')">Login</button>
+            <button onclick="nextScreen('device-pairing-screen')">Skip for Demo</button>
+        </section>
+
+        <section class="screen hidden" id="device-pairing-screen">
+            <h2>Device Pairing</h2>
+            <p>Connect your EEG headset and wearable watch.</p>
+            <button onclick="showNotification('EEG Headset Connected!')">Connect EEG Headset</button>
+            <button onclick="showNotification('Wearable Watch Connected!')">Connect Wearable Watch</button>
+            <button onclick="nextScreen('calibration-screen')">Next</button>
+        </section>
+
+        <section class="screen hidden" id="calibration-screen">
+            <h2>Device Calibration</h2>
+            <p>Ensuring your sensors work perfectly.</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%; background-color: #a1e3d8;">80% Complete</div>
+            </div>
+            <button onclick="showNotification('Calibration successful!')">Calibrate</button>
+            <button onclick="nextScreen('ai-training-screen')">Next</button>
+        </section>
+
+        <section class="screen hidden" id="ai-training-screen">
+            <h2>AI Training Introduction</h2>
+            <p>Our AI learns and adapts with your brain activity over time.</p>
+            <div class="graph-placeholder">[AI Training Progress Graph]</div>
+            <button onclick="nextScreen('baseline-data-screen')">Next</button>
+        </section>
+
+        <section class="screen hidden" id="baseline-data-screen">
+            <h2>Baseline Health Data Collection</h2>
+            <p>Fill out initial questionnaire and sync your devices.</p>
+            <input type="text" placeholder="Age">
+            <input type="text" placeholder="Medical History">
+            <button onclick="showNotification('Data synced!')">Sync Wearables</button>
+            <button onclick="showNotification('Questionnaire submitted!')">Submit</button>
+            <button onclick="location.href='index.html'">Finish Onboarding</button>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Neurofeedback System. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
